@@ -1,0 +1,34 @@
+@startuml
+
+'Input happens here for path name'
+class App
+{
+    +void main()
+}
+
+'Reads input file and returns that data to App'
+class readFile
+{
+    'Attributes'
+    +sentenceList
+    +scan
+
+    'Functions'
+    +void readTheInfo()
+    +ArrayList<String> getData()
+}
+
+'Writes new sentences to a brand new file using the data from App'
+class writeFile
+{
+    'Attributes'
+    +sentenceList
+    +writingInfo
+
+    'Functions'
+    +void writeToFile
+}
+
+App o--> readFile
+App o--> writeFile
+@enduml
